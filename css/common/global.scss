@@ -1,0 +1,183 @@
+@import 'variables.scss';
+@import 'util.scss';
+// 菜单路径样式
+.menu-path ul.flex-grid li + li {
+  margin-left: 30px;
+  position: relative;
+  &::before {
+    content: ">";
+    position: absolute;
+    left: -18px;
+    top: -1px;
+    color: #{$btn-text};
+  }
+}
+
+.menu-path {
+  color: #{$btn-text} !important;
+  .back-icon {
+    width: 17px;
+    vertical-align: middle;
+    margin-top: -3px;
+  }
+  .flex-grid > .menu-path_back{
+    position: relative;
+    margin-right: 30px;
+    color: #{$btn-text};
+    &::before {
+      content: '|';
+      position: absolute;
+      right: -17px;
+      top: 1px;
+      color: #e6e6e6;
+    }
+  }
+  .menu-path_btn-group a + a {
+    margin-left: 10px;
+  }
+  ul.flex-grid {
+    position: relative;
+    li.active {
+      color: $theme-color;
+    }
+  }
+}
+
+//  顶部面包屑固定
+.is-fixed-bread {
+  position: fixed;
+  left: 229px;
+  right: 0;
+  top: 50px;
+  z-index: 999;
+  transition: all .3s;
+}
+.main-sidebar.shrink + .main_body .is-fixed-bread{
+  left: 59px;
+}
+
+.content-header.menu-path {
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #{$dc};
+  @extend .flex-grid;
+  @extend .align-between;
+  @extend .padding-lr-30;
+}
+
+// 全局层叠定义
+.content-wrapper {
+  z-index: auto !important;
+}
+.is-fixed-nav {
+  z-index: 90 !important;
+}
+.is-fixed-bread {
+  z-index: 85;
+}
+
+.main-sidebar {
+  z-index: 100;
+}
+
+// 列表页fix 下拉框太长，列表表格太短， 不能完全显示下拉框(修复下拉框过长， 使容器出现滚动条)
+.content-wrapper {
+  flex: 1;
+}
+#main-container {
+  display: flex;
+}
+
+// 列表页
+#toggle-fields .toggle-text.in-fold + img {
+  transform: rotate(180deg);
+}
+
+// 分页样式
+.pagination-wrapper {
+  color: #{$btn-text};
+  .btn.selectpicker {
+    height: 28px !important;
+    line-height: 14px !important;
+  }
+  #gotoPageInput {
+    line-height: 28px !important;
+    height: 28px !important;
+  }
+}
+.pagination-theme-list {
+  .btn-next, .btn-prev {
+    background-color: #fff !important;
+    font-size: 14px !important;
+  }
+  .el-pager li {
+    background-color: #fff !important;
+    color: #{$btn-text};
+    font-size: 14px !important;
+    &.active {
+      background-color: #fff !important;
+      color: #{$theme-color} !important;
+    }
+  }
+}
+
+// 首页代办顶部距离
+#site_body {
+  margin-top: -30px !important;
+}
+
+// pdf 展示fix
+#pdf-show {
+  left: 0;
+  z-index: 110;
+  .pdf-title {
+    //background: #fff;
+  }
+  .container-flow {
+    background: #fff;
+  }
+}
+
+// fix 错乱布局 覆盖样式
+.content {
+  padding: 0px;
+  margin: 0 !important;
+}
+
+// 结算-分隔线
+.settlement-divide {
+  padding: 30px 0;
+  border-top: 1px solid #{$dc};
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+// 发货单明细  - 配货明细 - 分隔
+.delivery-divide {
+  * + * {
+    border-top: 1px solid #{$dc};
+  }
+}
+
+.input-detail {
+  border: 1px dashed #{$theme-color};
+  padding-bottom: 20px;
+  legend {
+    color: #{$theme-color};
+    width: fit-content;
+    padding: 0 10px;
+    margin: auto;
+    font-size: 14px;
+  }
+}
+
+
+//  合同上传 新增按钮
+.contract-add {
+  position: absolute;
+  right: 30px;
+  margin-top: -16px;
+}

@@ -1,0 +1,44 @@
+<?php
+/**
+ * Created by youyi000.
+ * DateTime: ##datetime##
+ * Describe：
+ */
+$searchForm = array(
+    'form_url' => '/' . $this->getId() . '/',
+    'input_array' => array(
+        ##searchItems##
+    ),
+    'buttonArray'=>array(
+            array('text'=>'导出','buttonId'=>'exportButton'),
+        ),
+);
+
+$this->loadForm($searchForm,$_GET);
+$this->widget('ZGridView', array(
+    'id'=>'data-grid',
+    'emptyText'=>'数据库没有符合条件的数据',
+    'dataProvider'=>$dataProvider,
+    'tableOptions'=>array(
+        "class"=>"data-table",
+        "data-config"=>"{ 
+            fixedHeader: true,
+            fixedColumns: {
+                leftColumns: 1
+                }
+            }",
+    ),
+    'columns'=>
+        array(
+            ##gridColumns##
+        )
+));
+
+?>
+<script>
+    $(function(){
+        $("#exportButton").click(function(){
+            location.href="/<?php echo $this->getId() ?>/export";
+        });
+    });
+</script>

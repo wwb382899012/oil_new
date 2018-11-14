@@ -1,0 +1,33 @@
+@import 'overide.scss';
+@import 'helper.scss';
+@import 'util.scss';
+@import "grid.scss";
+@import "form-controls.scss";
+
+// 功能卡片
+.z-card {
+  @extend .margin-20;
+  @extend .bg-white;
+  @extend .padding-24;
+  border: 1px solid #{$dc};
+  border-radius: 3px;
+  .z-card-header, .z-body-header {
+    @extend .margin-b-24;
+  }
+  .divide.z-card-part {
+    border-bottom: 1px solid #{$dc};
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  .z-card-header {
+    .content-wrap-expand {
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+  .busi-detail + * {
+    border-top: 1px solid #{$dc};
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+}

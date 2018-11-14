@@ -1,0 +1,25 @@
+@import 'variables.scss';
+@function maxWidth($count: 3) {
+  //  计算栅格系统最大宽度 $count: 列数
+  $gap: 10px;
+  @return ($gap * ($count - 1)) / $count;
+}
+
+@function percent($i, $j) {
+  @return $i / $j * 100%
+}
+
+@mixin dropDwonMenuOutline {
+  box-shadow: 0 2px 12px 0px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #dcdcdc;
+}
+
+@mixin btnCfg {
+  display: inline-block;
+  font-size: #{$common-size};
+  border-radius: 3px;
+  text-align: center;
+  padding: 0 10px;
+  height: #{$base-height};
+  line-height: #{$visible-height};
+}

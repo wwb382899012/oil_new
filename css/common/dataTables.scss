@@ -1,0 +1,166 @@
+@import 'variables.scss';
+
+// 所有对dataTable 盒模型的改变，都要基于原始class dataTable
+@mixin hoverBorder {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 1px;
+  transform-origin: 0 0;
+  transform: scale(.5,.5);
+  background-color: rgba(255,110,52,50);
+  z-index: auto;
+}
+
+@mixin shadow {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10px;
+    width: 10px;
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.05) 97%);
+  }
+}
+
+table.dataTable {
+  border: 1px solid $borderColor;
+  border-radius: 3px;
+  margin: 0;
+  //text-align: center;
+  //font-size: 12px;
+  thead {
+    th,td {
+      // 更改dataTable的padding只能基于dataTable这个calss
+      padding: 6px 14px;
+      padding-right: 24px;
+    }
+    th + th{
+      border-left: 1px solid #{$dc};
+    }
+  }
+  thead tr th {
+    border-bottom: none;
+    background-color: $bgColor;
+    //text-align: center;
+  }
+  tbody > tr > td {
+    position: relative;
+    padding: 6px 14px;
+    padding-right: 24px;
+  }
+  tr>td:last-child>a {
+    color: #409EFF;
+    //font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+table.dataTable thead .sorting {
+  background-position: calc(100% - 7px) 50%;
+}
+table.dataTable thead .sorting_asc {
+  background-position: calc(100% - 7px) 50%;
+}
+table.dataTable thead .sorting_desc {
+  background-position: calc(100% - 7px) 50%;
+}
+
+// override original style
+table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+  background-color: white;
+}
+table.dataTable.stripe tbody tr.even, table.dataTable.display tbody tr.even {
+  background-color: $evenTrbgColor;
+}
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+  border-bottom: 1px solid $borderColor;
+}
+
+table.dataTable.no-footer {
+  border-bottom: none;
+}
+.DTFC_RightWrapper, .DTFC_LeftWrapper {
+  position: relative;
+}
+.DTFC_RightHeadWrapper {
+  @include shadow;
+  .DTFC_Cloned {
+    border-bottom: none;
+  }
+  table {
+    border-left: 0;
+  }
+}
+.DTFC_RightBodyWrapper {
+  overflow: visible !important;
+  @include shadow;
+}
+.DTFC_LeftHeadWrapper {
+  @include shadow;
+  overflow: visible !important;
+  .DTFC_Cloned {
+    border-bottom: none;
+  }
+  table {
+    border-right: 1px solid #f7f7f7;
+  }
+}
+.DTFC_LeftBodyWrapper {
+  overflow: visible !important;
+  @include shadow;
+}
+.DTFC_LeftHeadWrapper, .DTFC_LeftBodyWrapper {
+  &::before {
+    left: auto;
+    right: -10px;
+    background-image: linear-gradient(-90deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.05) 97%);
+  }
+}
+.DTFC_RightBodyLiner{
+  width: 100% !important;
+  overflow-y: hidden !important;
+  border-right: 1px solid $borderColor;
+  padding: 0 !important;
+  table {
+    width: 100% !important;
+    border-left: 0;
+    border-right: 0;
+  }
+}
+.DTFC_LeftBodyLiner {
+  width: 100% !important;
+  overflow-y: hidden !important;
+  border-left: 1px solid $borderColor;
+  padding: 0 !important;
+  table {
+    width: 100% !important;
+    border-left: 0;
+    border-right: 0;
+  }
+}
+table.dataTable.hover tbody tr.hover, table.dataTable.display tbody tr.hover {
+  background-color: $hoverColor;
+  & > *::after{
+    @include hoverBorder;
+    bottom: 0;
+  }
+  & > *::before {
+    @include hoverBorder;
+    top: 0;
+  }
+}
+
+.dataTables_scrollHead {
+  background-color: $bgColor;
+  width: 100% !important;
+}
+.dataTables_scrollBody {
+  width: 100% !important;
+  overflow-x: scroll !important;
+}
+.DTFC_ScrollWrapper {
+  height: auto !important;
+}

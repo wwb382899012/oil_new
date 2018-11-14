@@ -1,0 +1,82 @@
+.o-control {
+  display: block;
+  position: relative;
+  padding-left: 14px;
+  cursor: pointer;
+}
+
+.o-control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.o-control__indicator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+  height: 14px;
+  width: 14px;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+}
+
+.o-control--radio .o-control__indicator {
+  border-radius: 50%;
+}
+
+.o-control input:checked ~ * {
+  color: #ff6200;
+}
+
+.o-control input:checked ~ .o-control__indicator {
+  background: #ff6200;
+  border: none;
+}
+
+.o-control input:disabled ~ .o-control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.o-control__indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.o-control input:checked ~ .o-control__indicator:after {
+  display: block;
+}
+
+.o-control--checkbox .o-control__indicator:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.o-control--checkbox input:disabled ~ .o-control__indicator:after {
+  border-color: #7b7b7b;
+}
+
+.o-control--radio .o-control__indicator:after {
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.o-control--radio input:disabled ~ .o-control__indicator:after {
+  background: #7b7b7b;
+}
+
+/*# sourceMappingURL=form-controls.css.map */

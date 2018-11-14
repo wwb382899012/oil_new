@@ -1,0 +1,36 @@
+<?php
+/**
+ * Created by youyi000.
+ * DateTime: ##datetime##
+ * Describe：
+ */
+
+class ##controller##Controller extends Controller
+{
+    public function pageInit()
+    {
+        parent::pageInit();
+        $this->rightCode = "##controller##";
+    }
+
+    public function actionIndex()
+    {
+        $search=$_GET["search"];
+        $sql="##sql##";
+
+        $dataProvider=new ZSqlDataProvider($sql);
+        $this->render('##viewName##', array(
+            'dataProvider' => $dataProvider,
+        ));
+    }
+
+
+    public function actionExport()
+    {
+        $search=$_GET["search"];
+        $sql="##exportSql##";
+        $data=Utility::query($sql);
+        $this->exportExcel($data);
+    }
+
+}

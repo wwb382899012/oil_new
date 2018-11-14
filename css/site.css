@@ -1,0 +1,152 @@
+i.short_cut_ico {
+	display: block !important;
+	font-size: 36px !important;
+	padding-bottom: 8px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.short_cut_box {
+	width:10%;
+	display: inline;
+	width: 10%;
+	float: left;
+	padding-bottom: 14px;
+}
+
+.short_cut_name {
+}
+
+.actions_head {
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 4px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.actions_nav {
+	font-size:14px; 
+	padding-bottom: 12px;
+	padding-top: 12px;
+	cursor: pointer ;
+	border-bottom: 2px solid white;
+	padding-left: 16px;
+	padding-right: 16px;
+    margin-right: 26px;
+}
+.actions_nav:hover {
+	color: #09f !important;
+}
+.actions_nav.actived {
+	color: #09f !important;
+}
+.no_actions {
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+.task_body {
+}
+
+a.task_link {
+	display: inline !important;
+	color: #09f !important;
+}
+
+i.ico-project {
+	background-image: url(/img/icon/project.svg);
+	width: 100%;
+	height: 40px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+i.ico-subContract {
+	background-image: url(/img/icon/subContract.svg);
+	width: 100%;
+	height: 40px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+i.ico-deliveryorder {
+	background-image: url(/img/icon/deliveryorder.svg);
+	width: 100%;
+	height: 40px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+i.ico-pay_application {
+	background-image: url(/img/icon/pay_application.svg);
+	width: 100%;
+	height: 40px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+i.ico-inputinvoice {
+	background-image: url(/img/icon/inputinvoice.svg);
+	width: 100%;
+	height: 40px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+i.ico-outputinvoice {
+	background-image: url(/img/icon/outputinvoice.svg);
+	width: 100%;
+	height: 40px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+i.ico-bankflow {
+	background-image: url(/img/icon/bankflow.svg);
+	width: 100%;
+	height: 40px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+i.ico-partnerapply {
+	background-image: url(/img/icon/partnerapply.svg);
+	width: 100%;
+	height: 40px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+i.ico-storehouse {
+	background-image: url(/img/icon/storehouse.svg);
+	width: 100%;
+	height: 40px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	text-align: center;
+	vertical-align: middle;
+}

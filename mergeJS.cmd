@@ -1,0 +1,20 @@
+uglifyjs ^
+js/jquery-2.1.4.min.js ^
+bootstrap/js/bootstrap.min.js ^
+plugins/datetimepicker/js/bootstrap-datetimepicker.min.js ^
+js/bootstrap-select/bootstrap-select.min.js ^
+js/bootstrap-select/i18n/defaults-zh_CN.min.js ^
+js/plugins/layer/layer.js ^
+js/plugins/iCheck/icheck.js ^
+js/jquery.bankInput.js ^
+plugins/dataTables/datatables.min.js ^
+js/clipboard.js ^
+js/plugins/jqPaginator-1.2.1/dist/jqpaginator.min.js ^
+js/knockout/knockout-3.4.2.js ^
+js/knockout/knockout.mapping.min.js ^
+js/knockout/knockout.validation.min.js ^
+js/knockout/knockout.extend.js ^
+js/config.js ^
+js/inc.js ^
+js/page.js ^
+ -o js/all.min.js

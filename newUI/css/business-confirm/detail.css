@@ -1,0 +1,49 @@
+.content-header_title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 50px;
+  background-color: #fff !important;
+  border-bottom: 1px solid #dcdcdc;
+}
+/* 合同条款 */
+.contract-item{
+  margin-bottom: 20px !important;
+}
+.contract-item .form-com{
+  display: unset;
+  float: left;
+  width: 50%;
+  margin-right: 2%;
+}
+.contract-item .form-com:first-child{
+  padding-right: 2%;
+  margin-right: 2%;
+}
+.contract-item .form-com>li{
+  width: 100%;
+  height: unset;
+}
+.contract-item .contract-type-container .contract-type__circle{
+  background-color: unset;
+  color: #333;
+  font-size: 16px;
+  width: unset;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* 创建人信息 */
+.creater{
+  margin-bottom: 20px;
+}
+.creater .form-com>li{
+  width: 49%;
+}
+.creater .form-com>li label{
+  width: unset;
+}
+.content{
+  padding: 0;
+}

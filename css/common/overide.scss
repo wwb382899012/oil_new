@@ -1,0 +1,237 @@
+// bootstrap-select 样式覆盖
+@import './variables.scss';
+@import "funcs";
+
+.bootstrap-select.show-menu-arrow.open > .btn {
+  z-index: calc(1035 + 1)
+}
+
+.bootstrap-select.btn-group .dropdown-menu.open {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  @include dropDwonMenuOutline
+}
+
+.bootstrap-select.show-menu-arrow .dropdown-toggle::after {
+  bottom: -12px !important;
+  left: 31px !important;
+}
+
+.bootstrap-select.show-menu-arrow .dropdown-toggle::before {
+  bottom: -11px !important;
+  left: 30px !important;
+  border-bottom-color: #ebeef5;
+}
+
+.bootstrap-select .dropdown-menu > .selected > a {
+  background-color: #{$fa};
+  color: $theme-color !important;
+}
+
+.bootstrap-select>.btn {
+  line-height: 18px  !important;
+  height: 32px !important;
+  background-color: #fff;
+}
+
+// datepicker for bootstrap
+.datetimepicker.dropdown-menu {
+  @include dropDwonMenuOutline;
+}
+
+.datetimepicker table tr td.active:active, .datetimepicker table tr td.active:hover:active, .datetimepicker table tr td.active.disabled:active, .datetimepicker table tr td.active.disabled:hover:active, .datetimepicker table tr td.active.active, .datetimepicker table tr td.active:hover.active, .datetimepicker table tr td.active.disabled.active, .datetimepicker table tr td.active.disabled:hover.active ,
+.datetimepicker table tr td span.active:active, .datetimepicker table tr td span.active:hover:active, .datetimepicker table tr td span.active.disabled:active, .datetimepicker table tr td span.active.disabled:hover:active, .datetimepicker table tr td span.active.active, .datetimepicker table tr td span.active:hover.active, .datetimepicker table tr td span.active.disabled.active, .datetimepicker table tr td span.active.disabled:hover.active{
+  background: $theme-color;
+}
+
+.datetimepicker table tr td span {
+  white-space: nowrap;
+}
+
+.bootstrap-select.show-menu-arrow.dropup .dropdown-toggle {
+  &:after {
+    top: -11px;
+  }
+  &:before {
+    top: -11px
+  }
+}
+
+// bootstrap input-group-addon
+.input-group  {
+  .form-control {
+    border-radius: 0 !important;
+  }
+  .input-group-addon {
+    $radius: 3px;
+    &:first-child {
+      border: {
+        top-left-radius: #{$radius};
+        bottom-left-radius: #{$radius};
+      }
+    }
+    &:last-child {
+      border: {
+        top-right-radius: #{$radius};
+        bottom-right-radius: #{$radius};
+      }
+    }
+    border-color: #{$dc};
+    background-color: inherit;
+  }
+}
+
+// modal 样式覆盖
+.modal-header--flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 24px 13px;
+  .close {
+    opacity: 1;
+    font-size: 32px;
+    font-weight: 300;
+    color: #{$btn-text};
+    &:hover {
+      color: #{$theme-color};
+    }
+  }
+}
+.modal-title {
+  line-height: 32px;
+}
+.modal-content {
+  border-radius: 3px;
+  .modal-body {
+    padding: 0 24px;
+  }
+}
+.modal-footer {
+  text-align: center;
+  border: none;
+  padding: 24px;
+  .o-btn + .o-btn {
+    margin-left: 10px;
+  }
+}
+// element confirm弹框样式覆盖
+.el-message-box {
+  padding: 0;
+  .el-message-box__header {
+    padding: 24px 24px 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .el-message-box__headerbtn {
+      position: static;
+      line-height: 1 !important;
+      .el-message-box__close {
+        color: #{$btn-text};
+        &:hover {
+          color: #{$theme-color};
+        }
+      }
+    }
+  }
+  .el-message-box__content {
+    padding: 0 24px 0;
+    .el-message-box__message {
+      padding-right: 0;
+      text-align: left;
+      p {
+        text-align: left;
+        display: inline-block;
+      }
+    }
+  }
+  .el-message-box__close {
+    font-size: 24px;
+    color: #000;
+    &:hover {
+      color: #{$theme-color};
+    }
+  }
+  .el-message-box__btns {
+    text-align: center;
+    padding: 50px 24px 24px;
+    button {
+      font-size: 14px;
+      height: 32px;
+    }
+  }
+}
+
+//  disable效果
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control,
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn{
+  background-color: #{$f7} !important;
+  opacity: 1 !important;
+}
+input[type=checkbox], input[type=radio] {
+  margin: 0;
+}
+label {
+  margin-bottom: 0px;
+}
+
+// 表中表样式覆盖
+table.in-table {
+  tbody>tr {
+    border-bottom: none;
+  }
+}
+
+
+// 字体图标
+.el-alert__content,
+.el-message .el-message__content{
+  color: #{$btn-text};
+}
+.el-alert--info {
+  background-color: #{$info-bg};
+}
+.el-message--info {
+  background-color: #{$info-bg};
+  border-color: #CCF0FE;
+}
+.el-icon-success,
+.el-icon-info,
+.el-icon-warning,
+.el-icon-error{
+  font-family: "icon" !important;
+}
+.el-message-box__status {
+  font-family: "icon" !important;
+  font-size: 27px !important;
+  font-style: normal;
+  color: #999;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+.el-icon-success {
+  color: #{$success} !important;
+  &::before {
+    content: '\e844';
+  }
+}
+.el-icon-info {
+  color: #{$info} !important;
+  &::before {
+    content: '\e846';
+  }
+}
+.el-icon-warning {
+  color: #{$wanring} !important;
+  &::before {
+    content: '\e848';
+  }
+}
+.el-icon-error {
+  color: #{$error} !important;
+  &::before {
+    content: '\e845';
+  }
+}
+
+.el-message-box__status+.el-message-box__message {
+  padding-left: 32px;
+}

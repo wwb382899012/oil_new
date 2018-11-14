@@ -1,0 +1,176 @@
+/* 头部 */
+.content-header{
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff !important;
+  border-bottom: 1px solid #dcdcdc;
+  color: #333;
+}
+.content-header .content-header__des{
+  margin-left: 0;
+  color: #606266;
+}
+.content-header__des span{
+    margin-right: 18px;
+    padding-right: 16px;
+    height: 16px;
+    border-right: 1px solid #dcdcdc;
+}
+.content-header__des span i{
+  font-size: 14px !important;
+  margin-right: 4px;
+}
+
+/* 卡片 */
+.content{
+  padding: 20px !important;
+}
+.sub-container .sub-container__box,.box{
+  border-top: 1px solid #d2d6de !important;
+  border: 1px solid #dcdcdc;
+}
+.sub-container__box{
+  padding: 24px;
+}
+.box-header{
+  padding: 0;
+}
+.box-content-title:before{
+  display: none;
+}
+.box-header.with-border{
+  border-bottom: none !important;
+}
+.box-content-title .box-title{
+  margin-left:0 !important;
+  font-size: 18px !important;
+  color: #333333 !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+  margin-bottom: 20px;
+}
+.box-body.box-content-custom{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+label{
+  margin-bottom: 0 !important;
+}
+.form-control-static{
+  min-height: unset !important;
+  padding-top: unset !important;
+  padding-bottom: unset !important;
+}
+.box-content-title .box-title__hiden{
+  height: 20px;
+}
+/* 合同信息 */
+.contract-info>div{
+  display: flex;
+  float: left;
+  width: 32.33%;
+  margin-right: 1%;
+}
+.contract-info>div>label{
+  width:unset !important;
+  font-weight: 400;
+}
+.contract-info>div>div{
+  flex: 1;
+}
+.contract-info>div>label{
+  width: 8em !important;
+}
+
+/* 交易明细 */
+.table-title{
+  display: flex;
+  height: 34px;
+  line-height: 32px;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.table-title>div{
+  display: flex;
+  align-items: center;
+  float: right;
+  min-width: 196px;
+}
+.table-title>div>.bootstrap-select{
+  flex: 0 0 130px;
+}
+.table-title>div>.validationMessage{
+  width: 150px;
+  margin-top: 0;
+}
+.table-title>div>.ul-li-com{
+  width: 200px;
+  margin-left: 10px;
+}
+.split{
+  margin: 20px 0;
+  width: 100%;
+  height: 0;
+  border-top: 1px dotted #dcdcdc;
+}
+.contract-item{
+  margin-bottom: 20px !important;
+}
+.contract-item .contract-item_title{
+  padding: 0;
+}
+.contract-item .bd-right-2 {
+    border-right: 0;
+    padding: 0;
+}
+.contract-item .contract-type-container{
+  margin-top: 0 !important;
+}
+.contract-item .form-com{
+  display: unset;
+  float: left;
+  width: 50%;
+  margin-right: 2%;
+}
+.contract-item .form-com:first-child{
+  padding-right: 2%;
+  margin-right: 2%;
+}
+.contract-item .form-com>li{
+  width: 100%;
+  height: unset;
+}
+.box-body{
+  padding: 0;
+}
+.contract-item .box-body-custom>div{
+  display: flex;
+  flex-direction: column;
+}
+.contract-item .box-body-custom>div>label{
+  text-align: left;
+}
+.selectpicker{
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-group-custom .dropdown-toggle:hover{
+  border-color: #FF6E34 !important;
+  outline: none !important;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.bootstrap-select .btn:focus{
+  outline: none !important;
+}
+.btn-block button{
+  padding: 0 !important;
+  margin-right: 10px;
+}
+.contract-item .contract-type-container .contract-type__circle{
+  background-color: unset;
+  color: #333;
+  font-size: 16px;
+  width: unset;
+  text-align: left;
+  font-weight: 500;
+}

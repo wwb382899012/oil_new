@@ -1,0 +1,37 @@
+#print-container{
+  width: 760px;
+  padding: 0;
+  margin:10px auto;
+}
+#head{
+  margin: 0;
+  padding: 3px;
+  text-align: center;
+  border-color: gray;
+}
+.above-table{
+  margin: 5px 0;
+  width: 100%;
+  text-align: right;
+    font-size: 12px;
+}
+
+.below-table{
+  margin: 3px;
+  width: 100%;
+  font-size: 12px;
+}
+.below-table div{display: inline-block; width: 120px;}
+table{
+  border-collapse: collapse;
+}
+td{ 
+  border:1px solid #999999;
+  text-align: left;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+
+

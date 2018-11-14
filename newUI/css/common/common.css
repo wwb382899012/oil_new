@@ -1,0 +1,1239 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	-webkit-font-smoothing: antialiased;
+}
+/* reset */
+/**
+* Neat.css 解决的问题
+* 基于业务需要兼容的浏览器做到以下几点：
+* 1.解决BUG，特别是低级浏览器的常见BUG；
+* 2.统一效果，但不盲目追求重置为0；
+* 3.向后兼容；
+* 4.考虑响应式；
+* 5.考虑移动设备。
+*/
+/* ==========================================================================
+ 有即是无，无即是有
+ ========================================================================== */
+body, dl, dd,
+ul, ol,
+h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, legend, input, textarea, optgroup,
+p, blockquote, figure, hr, menu, dir,
+thead, tbody, tfoot, th, td {
+  margin: 0;
+  padding: 0;
+}
+a,a:focus{
+	outline: none !important;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.slt{
+	color: #FF6E34;
+	font-weight: 500;
+}
+.clear:after{
+	content:'';
+	display: table;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+	zoom: 1;
+}
+textarea{
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	border: 1px solid #dcdcdc;
+	border-radius: 3px;
+	height: 92px;
+	outline: none;
+	padding: 4px 10px;
+}
+textarea:hover{
+	border-color: #FF6E34 !important;
+}
+.left10{
+	margin-left: 10px;
+}
+.right10{
+	margin-right: 10px;
+}
+.front-dot:before{
+	position: relative;
+	top: -4px;
+	margin-right: 10px;
+	 content: "";
+	 width: 4px;
+	 height: 4px;
+	 display: inline-block;
+	 border-radius: 50%;
+	 background-color: #333;
+}
+.sanjiao:after{
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-top: 6px solid #ccc;
+    position: relative;
+    top: 4px;
+    margin-left: 3px;
+}
+.solid-bg{
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 4px;
+}
+input{
+	padding: 0 10px;
+	width: 193px;
+	height: 32px;
+	line-height: normal;
+	border: 1px solid #bfcbd9;
+	border-radius: 4px;
+	outline: none;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+input.err{
+	border-color: red !important;
+}
+input:hover{
+	border-color: #8391a5;
+}
+input:focus{
+	border-color:#FF6E34;
+    /*border-color:#66afe9;*/
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);*/
+    /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);*/
+}
+.dialog{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.dialog>div{
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.34);
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #fff;
+}
+.dialog>div>p:first-child{
+	height: 50px;
+	line-height: 50px;
+	background-color: #66AFE9;
+	color: #fff;
+	padding-left: 10px;
+	font-size: 18px;
+}
+.dialog>div>p>i{
+	color: #fff;
+	margin-right: 10px;
+	float: right;
+}
+.dialog>div>div{
+	padding: 20px;
+}
+.el-message-box__headerbtn{
+	width: unset !important;
+	height: unset !important;
+	background-color: unset !important;
+	min-width: unset !important;
+}
+.el-message-box__btns>.el-button:not(.el-button--primary):hover, .el-message-box__btns>.el-button:not(.el-button--primary):focus{
+	color: unset !important;
+	border: 1px solid #dcdcdc;
+	background-color: unset !important;
+}
+.el-button--primary{
+	background-color: #FF6E34 !important;
+	border-color: #FF6E34 !important;
+}
+.bootstrap-select button.btn:focus{
+	outline: none !important;
+}
+button:not(.el-button):not(.btn-prev):not(.btn-next):not(.el-picker-panel__icon-btn):not(.selectpicker){
+	width: 88px;
+	height: 32px;
+	line-height: 32px;
+	min-width: 75px;
+	background-color: #FF6E34;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	outline: none;
+	font-size: 14px;
+}
+.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover{
+	background-color: #FFF1EB;
+	color: #ff6200;
+}
+button.add-btn-custom{
+	padding: 0 !important;
+	color: #fff !important;
+}
+.add-btn-container{
+	margin: 0 !important;
+	border: 1px solid #dcdcdc !important;
+	border-top: none !important;
+	border-radius: 0 0 3px 3px;
+	width: 100% !important;
+	display: flex;
+	align-items: center;
+	padding-right: calc(10% - 62px);
+	justify-content: flex-end;
+	height: 46px;
+}
+.el-date-table td.today span,.el-date-table td.available:hover,.el-date-picker__header-label:hover,
+.el-picker-panel__icon-btn:hover,.el-year-table td .cell:hover,.el-month-table td .cell:hover{
+	color: #FF6E34 !important;
+}
+table.table>thead>tr>th, table.table>tbody>tr>th, table.table>tfoot>tr>th, table.table>thead>tr>td, table.table>tbody>tr>td, table.table>tfoot>tr>td{
+	border-top:1px solid #dcdcdc;
+}
+.el-date-table td.current:not(.disabled) span{
+	background-color: #FF6E34 !important;
+	color: #fff !important;
+}
+button.cancel{
+	background-color: #fff !important;
+	color: #666 !important;
+	border: 1px solid #DCDCDC !important;
+	border-radius: 3px;
+}
+button.cancel:hover{
+	border-color: #FF6E34 !important;
+	color: #FF6E34 !important;
+}
+.table-bordered>tbody>tr>td{
+	border: 1px solid #dcdcdc;
+}
+/*
+ icon
+*/
+/*动画：slide*/
+.slide-enter-to,.slide-leave{
+    opacity: 1;
+    height: auto;
+    transform: translateX(0px);
+}
+.slide-enter-active,.slide-leave-active {
+  transition: all .3s ease;
+  overflow: hidden;
+}
+.slide-enter, .slide-leave-to{
+    transform: translateX(15px);
+    opacity: 0;
+    height: 0;
+}
+
+/*elmentui 覆盖*/
+.icon,.iconfont,.fa{
+	font-size: 20px !important;
+	color: #999;
+	vertical-align: middle;
+}
+body{
+	font-family: PingFang SC,Microsoft YaHei,sans-serif,Hiragino Sans GB,Helvetica Neue,Helvetica,SimSun !important;
+}
+input{
+	border: 1px solid #dcdcdc !important;
+	border-color: #dcdcdc !important;
+	color: #333 !important;
+	border-radius: 3px !important;
+}
+input[readonly]{
+	background-color: #f7f7f7;
+	cursor: not-allowed;
+}
+select{
+	background-color: #fff;
+}
+.el-select input[readonly]{
+	background-color: #fff;
+}
+
+input[readonly]:hover,input[readonly]:focus{
+	border-color: #dcdcdc!important;
+}
+input:hover,input:focus,.el-input__icon:hover+input{
+	border-color: #FF6E34!important;
+}
+.el-select-dropdown{
+	border: 1px solid #dcdcdc !important;
+	box-shadow: 0 2px 12px 0px rgba(0, 0, 0, 0.1) !important;
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected.hover, .el-select-dropdown__item.hover, .el-select-dropdown__item:hover{
+	background-color:#fafafa !important
+}
+.el-select-dropdown__item{
+	color: #333 !important;
+}
+.el-select-dropdown__item.selected{
+	color: #fff !important;
+	background-color: #fafafa !important;
+}
+input::-webkit-input-placeholder {
+	color: #999 !important;
+}
+textarea::-webkit-input-placeholder {
+	color: #999 !important;
+}
+textarea{
+	min-height: 32px !important;
+}
+input:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #999 !important;
+}
+input::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #999 !important;
+}
+input::-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #999 !important;
+}
+.el-select .el-input .el-input__icon{
+	color: #999 !important;
+}
+.el-select-dropdown__item.selected.hover,.el-select-dropdown__item.selected{
+	color: #FF6E34 !important;
+}
+
+.el-pager li,.el-pagination .btn-next, .el-pagination .btn-prev{
+	border: none !important;
+}
+.el-pager .more::before{
+	line-height: 20px !important;
+}
+.el-pager li:hover,.el-pagination button:hover{
+	color: #FF6E34 !important;
+}
+.btn-prev,.btn-next{
+	padding: 0 !important;
+	background-color: #fafafa !important;
+	border-radius: 50% !important;
+	min-width: 20px !important;
+	height: 20px !important;
+	line-height: 20px !important;
+	color: #999 !important;
+}
+.btn-next{
+	margin-left: 10px !important;
+}
+.el-pager li{
+	background-color: #fafafa !important;
+	height: 20px !important;
+	line-height: 20px !important;
+	text-align: center !important;
+	padding: 0 !important;
+	min-width: 20px !important;
+	border-radius: 50% !important;
+	color: #999 !important;
+	margin-left: 10px !important;
+	font-size: 12px !important;
+}
+.el-pager li.active{
+	background-color: #FF6E34 !important;
+	color: #ffffff !important;
+}
+.el-select{
+	width: 193px;
+}
+.el-pagination__sizes .el-select{
+	width: unset;
+}
+.el-pagination span:not([class*=suffix]), .el-pagination button,.el-pagination__editor.el-input{
+	height: unset !important;
+	line-height: unset !important;
+}
+.el-pagination .btn-prev, .el-pagination .btn-next{
+	height: 20px !important;
+}
+.el-radio__inner{
+	width: 14px !important;
+	height: 14px !important;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner{
+	border-color: #FF6E34 !important;
+	background: #FF6E34 !important;
+}
+.el-radio__input.is-checked .el-radio__inner{
+	border-color: #FF6E34 !important;
+	background: #FFF !important;
+}
+.el-radio__inner:hover,.el-checkbox__inner:hover,.el-checkbox__input.is-focus .el-checkbox__inner{
+	border-color: #FF6E34 !important;
+}
+
+.el-input__inner{
+	border-radius: 3px !important;
+	height: 32px !important;
+}
+.el-pagination__editor.el-input .el-input__inner,.el-pagination .el-select .el-input .el-input__inner{
+	height: 28px !important;
+}
+.el-input-group--prepend .el-input__inner, .el-input-group__append {
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+.el-checkbox__inner{
+	width: 14px !important;
+	height: 14px !important;
+}
+.el-checkbox__inner::after{
+	width: 2px !important;
+}
+.el-input-group__append, .el-input-group__prepend{
+	background-color: #fff !important;
+	border: 1px solid #dcdcdc !important;
+	color: #999 !important;
+	padding: 0 13px 0 12px !important;
+}
+.pay-contract .el-input-group{
+	width: 12% !important;
+}
+.el-radio{
+	line-height: unset !important;
+}
+.el-radio__label{
+	font-weight: 400 !important;
+	padding-left: 15px !important;
+}
+.el-radio:focus:not(.is-focus):not(:active) .el-radio__inner{
+	box-shadow: none !important;
+}
+.el-radio+.el-radio{
+	margin-left: 40px !important;
+}
+.el-input-group--prepend>.el-input-group__prepend{
+	border-right: 0 !important;
+}
+.el-radio__inner::after{
+	width: 8px !important;
+	height: 8px !important;
+	background-color: #FF6E34 !important;
+}
+.el-radio__input.is-checked+.el-radio__label{
+	color: unset !important;
+}
+
+/*表格*/
+.el-table{
+	border: 1px solid #dcdcdc !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	border-radius: 3px !important;
+	color: #666 !important;
+}
+.el-table th{
+	background-color: #f7f7f7 !important;
+	color: #666 !important;
+}
+.el-table td, .el-table th{
+	padding: unset !important;
+}
+.el-table th, .el-table tr{
+	height: 46px !important;
+	line-height: 46px !important;
+}
+.el-table td, .el-table th.is-leaf{
+	border-bottom: unset !important;
+}
+.el-table::before{
+	height: 0 !important;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td{
+	background-color: #f7f7f7 !important;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
+.el-table__body tr.current-row>td, .el-table__body tr.hover-row.current-row>td,
+.el-table__body tr.hover-row.el-table__row--striped.current-row>td,
+.el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td{
+	background-color: #fff1eb !important;
+}
+.el-table--enable-row-transition .el-table__body td{
+	transition: unset !important;
+}
+.hover-row>td::before,.hover-row>td::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 200%;
+	height: 1px;
+	transform-origin: 0 0;
+	transform: scale(.5,.5);
+	background-color: rgba(255,110,52,50);
+	z-index: 9;
+}
+.hover-row>td::before{
+	top: 0;
+}
+.hover-row>td::after{
+	bottom: 0;
+}
+.el-table__header-wrapper{
+	border-bottom: 1px solid #dcdcdc !important;
+}
+.el-table__header-wrapper th:not(:last-child){
+	border-right: 1px solid #dcdcdc !important;;
+}
+.err .el-input__inner{
+	border-color: red !important;
+}
+.el-breadcrumb__separator{
+	color: #999 !important;
+}
+.el-message{
+	z-index: 9999999999 !important;
+}
+.el-popper{
+	z-index: 2222 !important;
+}
+.el-popper[x-placement^="bottom"]:not(.el-select-dropdown){
+	margin-top: 0 !important;
+}
+.sub-indicator .el-checkbox {
+  color:#666;
+  font-weight:normal;
+  vertical-align:middle;
+}
+
+.sub-indicator  .el-checkbox__label {
+    font-size: 14px;
+    padding-left: 10px !important;
+    display: inline-block;
+    vertical-align: middle;
+  }
+.el-table--border td, .el-table--border th{
+  border:none;
+}
+body{
+	color: #333;
+}
+a{
+	color: #333;
+}
+a:active{
+	color: #333;
+}
+.el-pagination button{
+	width: auto;
+}
+/**
+* 非大面积文字排版网站通常不需要列表项，如果需要可单独设置
+*/
+/* ul, ol {
+  list-style-type: none;
+  list-style-image: none;
+} */
+ul{
+  list-style: none;
+}
+/* ==========================================================================
+ 链接
+ ========================================================================== */
+/**
+* 1. 去除链接默认的下划线，提高文字可读性
+* 2. 去掉 IE 10+ 点击链接时的灰色背景
+*/
+a {
+  text-decoration: none;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+}
+
+/**
+* 去掉点击时的焦点框，同时保证使用键盘可以显示焦点框
+*/
+a,a:active,
+a:hover, a:active, a:focus {
+	outline-width: 0;
+	color: #666 ;
+	text-decoration: none !important;
+}
+
+/**
+* 统一 Chrome 和 Safari 的焦点框样式
+* Chrome 中 thin 关键字放大页面后焦点框不会放大 http://jsbin.com/ehakom/1
+* Firefox 中 box-shadow 会导致焦点框位置偏移，需用「outline-offset」修正
+*
+*/
+a:focus {
+  outline: 1px dotted;
+}
+
+/* ==========================================================================
+ 字体和基础排版
+ ========================================================================== */
+/**
+* 1.防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常
+*/
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* 1 */
+  font-size: 62.5%;
+  /* 10/16=62.5% */
+}
+
+body {
+  font-size: 14px;
+  line-height: calc(22 / 14);
+}
+
+html,body{
+  width:100%;;
+  height:100%;
+}
+
+/**
+* 所有 font-family 小写，存在空格的字体名加单引号
+* @default-font: 'helvetica neue', tahoma, \5B8B\4F53, sans-serif;
+* @heading-font: 'helvetica neue', tahoma, 'hiragino sans gb', stheiti,
+  \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, 'wenquanyi micro hei', sans-serif;
+* @code-font: monaco, menlo, consolas, monospace;
+*/
+/**
+* 中文优先使用冬青黑体简体(OS X)、微软雅黑(Windows)和文泉驿微米黑(Linux)
+* 西文使用 tahoma
+* 1. 防止元素中「font-family」不能继承
+* 2. 西文字体和 OS X 字体写在前面
+* 3. Opera 12.1 之前版本不支持中文字体的英文名称
+* 4. 微软雅黑「\5FAE\8F6F\96C5\9ED1」,中易宋体「\5B8B\4F53」
+*/
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'helvetica neue', arial, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  /* 5 */
+  text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  /* 5 */
+}
+
+/**
+* 中文小于 12px 可读性很差
+* 1. 统一 IE 6-7 中字体大小
+* 2. 统一 Firefox 4+，Safari 5 和 Chrome 中「section」和「article」内的字体大小
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+/**
+* 修正「abbr」元素在 Firefox 外其他浏览器没有下划线的问题
+* 添加问号光标，明确语义
+*/
+abbr,
+acronym {
+  border-bottom: 1px dotted;
+  /* 1 */
+  cursor: help;
+  /* 2 */
+}
+
+/**
+* Firefox3+，Safari4/5 和 Chrome 中统一设置为粗体
+*/
+b,
+strong {
+  font-weight: 500;
+}
+
+/**
+* 修正 Safari5 和 Chrome 中没有样式的问题
+*/
+dfn {
+  font-style: italic;
+}
+
+/**
+* 修正 Firefox 和其他浏览器之间的差异
+*/
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+* 网页标记，荧光笔
+* 修正 IE6-11 中没有样式的问题
+*/
+mark {
+  background-color: #d2e5ff;
+  color: #000;
+}
+/**
+* 统一代码的字体设置
+* 字体要能明确区分数字 0 和字母 o
+* Mac 优先使用 Monaco，Windows 优先使用 Consolas
+* XP自带 Courier New
+* Windows 7开始自带的 Consolas
+* Mac上自带的Monaco，Osaka-Mono
+*/
+code,
+kbd,
+pre,
+samp {
+  font-family: monaco, menlo, consolas, 'courier new', courier, monospace;
+}
+
+/**
+* 增强所有浏览器中 pre 标签中文本的可读性
+* 1. IE 6-7 不支持 pre-wrap
+* 2. pre 标签应当包含滚溢出
+*/
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  /* 1 */
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+/**
+* 行内引用
+* IE 6-7 不支持 quotes 属性
+* 现代浏览器去除 quotes 内容
+*/
+q {
+  quotes: none;
+}
+
+/**
+* Safari 4 不支持<q>标签
+*/
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/**
+* 中文网页<small>元素字号小于 12px 不易阅读
+*/
+small {
+  font-size: 85.7%;
+  /* 12/14=0.8571428571 */
+}
+
+/**
+* 防止所有浏览器中的<sub>和<sup>影响行高
+* http://jsbin.com/usoyal/1/edit
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+/* ==========================================================================
+ 表格
+ ========================================================================== */
+/**
+* 合并单元格边框
+*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+* 修复 IE 中 th 不能继承 text-align 的问题并统一左对齐
+* http://jsbin.com/evoxif/2/edit
+*/
+th {
+  text-align: left;
+}
+/**
+* 表头底部边框
+*/
+table th {
+  font-weight: inherit;
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+}
+table tr{
+	height:46px;
+}
+/* ==========================================================================
+ 嵌入元素
+ ========================================================================== */
+/**
+* 1. 去除 IE6-9 和 Firefox 3 中 a 内部 img 元素默认的边框
+* 2. 修正 IE8 图片消失bug
+* 3. 防止 img 指定「height」时图片高度不能按照宽度等比缩放，导致图片变形
+    http://jsbin.com/aJoTUca/2
+* 4. 让图片支持响应式
+* 5. 去除现代浏览器图片底部的空隙
+* 6. 修复 IE7 图片缩放失真
+*/
+img {
+  border-style: none;
+  /* 1 */
+  width: auto\9;
+  /* 2 */
+  height: auto;
+  /* 3 */
+  max-width: 100%;
+  /* 4 */
+  vertical-align: top;
+  /* 5 */
+  -ms-interpolation-mode: bicubic;
+  /* 6 */
+}
+
+/**
+* 修复 IE9 中的「overflow」的怪异表现
+*/
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+ 表单
+ ========================================================================== */
+/**
+* 定义一致的边框、外边距和内边距
+*/
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+/**
+* 1. 修正 IE 6-9 中颜色不能继承的问题
+* 2. 修正 Firefox3 中文字不换行的问题
+* 3. 修正 IE6-7 中怪异的对齐方式
+*/
+legend {
+  border-style: none;
+  /* 1 */
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+* 1. 修正所有浏览器中字体不继承的问题
+* 2. 修正所有浏览器中字号不继承的问题
+* 3. 修正 Firefox 3+， Safari5 和 Chrome 中外边距不同的问题
+* 4. 改善在所有浏览器下的垂直对齐方式
+*/
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  vertical-align: baseline;
+  /* 4 */
+  *vertical-align: middle;
+  /* 4 */
+}
+
+/**
+* 修正 IE7 随着字数增加边距不断增加的问题
+*/
+input,
+button {
+  *overflow: visible;
+}
+
+/**
+* 统一各浏览器「text-transform」不会继承的问题
+* http://jsbin.com/iqecic/1/edit
+* http://tjvantoll.com/2012/07/10/default-browser-handling-of-the-css-text-transform-property/
+*/
+button,
+select {
+  text-transform: none;
+}
+
+/**
+* 1. 避免 Android 4.0.* 中的 WebKit bug ，该bug会破坏原生的
+ 「audio」 和「video」的控制器
+* 2. 更正 iOS 中无法设置可点击的「input」的问题
+* 3. 统一其他类型的「input」的光标样式
+*/
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+* 重置按钮禁用时光标样式
+*/
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/**
+* 1. 修正 IE 8/9 box-sizing 被设置为「content-box」的问题
+* 2. 移除 IE 8/9 中多余的内边距
+* 3. 移除 IE7 中多余的内边距(IE6 中任然存在)
+*/
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+* 1. 修正 Safari 5 和 Chrome 中「appearance」被设置为「searchfield」的问题
+* 2. 修正 Safari 5 和 Chrome 中「box-sizing」被设置为 「border-box」的问题
+*/
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/**
+* 1.移除 OS X 中 Safari5 和 Chrome 搜索框内侧的左边距
+* 2.如果需要隐藏清除按钮需要加上
+ input[type="search"]::-webkit-search-cancel-button
+*/
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+* 移除 Firefox 3+ 的内边距
+*/
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+* 修正 Chrome 中 input [type="number"] 在特定高度和 font-size 时,
+* 下面一个箭头光标变成「cursor: text」
+* @demo: http://jsfiddle.net/FFXEc/
+* 动画演示：http://gtms04.alicdn.com/tps/i4/T18kd8FCtaXXc_FhcF-330-350.gif
+*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+* 1. 移除 IE6-11 中默认的垂直滚动条
+* 2. 禁止水平拖动，防止破坏布局
+*/
+textarea {
+  overflow: auto;
+  /* 1 */
+  resize: vertical;
+	/* 2 */
+	border-radius: 3px !important;
+	height: 92px;
+}
+
+/**
+* 修正 Chrome 30- option 中文字无法显示的问题
+* http://jsbin.com/avujas/1/edit
+*/
+select:disabled option:checked,
+option:disabled:checked {
+  color: #d2d2d2;
+}
+
+/**
+* 修正 Safari 3+, Chrome 1+ Placeholder 居中问题
+*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input {
+    line-height: normal !important;
+  }
+}
+
+/**
+* 修正 Firefox 19+ Placeholder 设置了opacity 的问题
+*/
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: darkGray;
+  opacity: 1;
+}
+
+/**
+* 统一 select 样式, Firefox 中有 padding:1px 0
+* http://jsbin.com/avujas/1/edit
+*/
+select[size],
+select[multiple],
+select[size][multiple] {
+  border: 1px solid #aaa;
+  padding: 0;
+}
+
+/* ==========================================================================
+ HTML5 元素
+ ========================================================================== */
+/**
+* 修正未定义为「block」的元素
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+* 1. 修正未定义为「inline-block」的元素
+* 2. 修正 Chrome、Firefox、Opera 中 「progress」元素 vertical-align 默认值不一致
+*/
+audio,
+canvas,
+video,
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+* 1.防止现代浏览器将没有「controls」属性的 「audio」元素显示出来
+* 2.去掉 iOS 5 中多余的高度
+*/
+audio:not([controls]) {
+  display: none;
+  /* 1 */
+  height: 0;
+  /* 2 */
+}
+
+/**
+* 修复 IE 7/8/9，Firefox 3 和 Safari 4 中 「hidden」属性不起作用的问题
+* 在IE、Safari、Firefox 22- 中隐藏「template」元素
+*/
+[hidden], template {
+  display: none;
+}
+
+/**
+* 为可拖动元素添加拖动的光标
+* http://jsbin.com/apavod/1/edit
+*/
+[draggable] {
+  cursor: move;
+}
+
+input.error {
+    border:dotted 1px #F00 !important;
+    color: #F00 !important;
+}
+label.error,div.error {
+    margin-left: 10px;
+    width: auto;
+    display: inline;
+    color: red;
+}
+.validationMessage,.validationMessage1 {
+    color: #F00;
+    margin-left: 10px;
+    width: auto;
+    position:relative;
+    display:block;
+    margin-top: 5px;
+}
+.validationElement,.validationElement1 {
+    color: #F00 !important;
+}
+.validationElement > .btn.selectpicker,
+.validationElement {
+	border-color:#F00 !important;
+}
+.content-wrapper, .main-footer{
+	margin: 0;
+  padding: 0;
+}
+.form-control{
+	border-radius: 3px;
+	height: 32px;
+}
+.form-control>.dropdown-toggle.selectpicker{
+	height: 32px;
+}
+.form-control:focus,.form-control:hover{ 
+	border-color:#ff6e34 !important;
+}
+.bootstrap-select .btn:focus{
+	outline: none!important;
+}
+.form-control:focus,.form-control:hover{
+	box-shadow: none !important;
+	outline: none !important;
+	border-color: #ff6e34 !important;
+	background-color: none !important;
+}
+button:hover,button:focus,.btn-default.focus, .btn-default:focus,button.bootstrap-select button.btn:focus {
+		border-color: none !important;
+		outline: none !important;
+}
+.selectpicker.btn-default{
+	background-color: #fff;
+	border-color: #dcdcdc;
+}
+ol, ul,p {
+	margin: 0;
+}
+.must-logo{
+	margin-left: 3px;
+	color: #fa4d4e;
+	font-style: normal;
+	vertical-align: middle;
+}
+.content-header__des span {
+    margin-right: 18px;
+    padding-right: 16px;
+    height: 16px;
+    border-right: 1px solid #dcdcdc;
+}
+.content-header__des span i {
+    font-size: 14px !important;
+    margin-right: 4px;
+}
+.bootstrap-select > .btn-default{background-color: #fff!important;}
+.bootstrap-select > .disabled{background-color: #eee!important;}
+/* 头部 */
+.content-header>.flex-grid>button{
+	margin-left:8px;
+}
+
+/* overide.css */
+.bootstrap-select > .btn{
+	transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+}
+.bootstrap-select > .btn:hover,.open>.dropdown-toggle.btn-default:hover{
+	color: #666;
+	border-color: #FF6E34!important;
+}
+.bootstrap-select.btn-group .dropdown-menu li a{
+	height: 34px;
+	line-height: 34px;
+	padding: 0;
+	padding-left: 20px;
+	color: #666;
+}
+.bootstrap-select .dropdown-menu > .selected > a {
+		background-color: #FFF1EB !important;
+}
+.dropdown-menu>li>a:hover {
+    background-color: #FFF1EB;
+}
+.btn-group.open button.dropdown-toggle,button.btn:active{
+	box-shadow: none;
+	color: #666;
+	border: 1px solid #dcdcdc !important;
+}
+.bootstrap-select.btn-group .btn span.caret{
+	color: #999;
+}
+.table thead tr th,.table tbody tr td,.table tfoot tr td{
+	padding: 0 12px !important;
+	vertical-align: middle;
+}
+.z-btn-action{
+	min-width: 50px;
+}
+
+::-webkit-scrollbar{  
+	width: 8px;  /*滚动条宽度*/
+	height: 8px;  /*滚动条高度*/
+}
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track{
+	background: transparent;
+}  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb{
+	margin-right: 2px !important;
+	border-radius: 10px;  /*滚动条的圆角*/
+	background-color: rgba(171, 171, 171, 0.78);  /*滚动条的背景颜色*/
+	border:2px solid transparent;
+}

@@ -1,0 +1,276 @@
+// zheming
+@import 'variables.scss';
+@import 'funcs.scss';
+
+// reset style
+*, *::after, *.before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+h3 {
+  // 用于card标题;
+  font-size: 18px;
+}
+
+textarea {
+  line-height: 22px !important;
+  padding: 4px 12px;
+  border-color: #{$dc} !important;
+}
+
+// grid stystem
+.inline-flex {
+  display: inline-flex;
+  align-items: center;
+}
+.flex-grid {
+  // 多列栅格
+  display: flex;
+  align-items: flex-start;
+  .col {
+    flex: 0 0 auto;
+  }
+  .col + .col {
+    margin-left: 10px;
+  }
+  &.align-between {
+    justify-content: space-between;
+  }
+  &.align-right {
+    justify-content: flex-end;
+  }
+  .cell-title {
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.align-start {
+    align-items: flex-start;
+  }
+}
+.first-line-align {
+  line-height: #{$base-height};
+}
+
+.field.col {
+  flex: 1;
+  margin-bottom: 0;
+  $count: 3;
+  $max-width: maxWidth($count);
+  max-width: calc(100% / #{$count} - #{$max-width});
+}
+.field.col-count-1 {
+  $count: 1;
+  $max-width: maxWidth($count);
+  max-width: calc(100% / #{$count} - #{$max-width});
+}
+.field.col-count-2 {
+  $count: 2;
+  $max-width: maxWidth($count);
+  max-width: calc(100% / #{$count} - #{$max-width});
+}
+.field.col-count-3 {
+  $count: 3;
+  $max-width: maxWidth($count);
+  max-width: calc(100% / #{$count} - #{$max-width});
+}
+.field.col-count-4 {
+  $count: 4;
+  $max-width: maxWidth($count);
+  max-width: calc(100% / #{$count} - #{$max-width});
+}
+.field.full-space {
+  max-width: 100%;
+}
+.w-full {
+  display: block;
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+// base style
+.w-100 {
+  // 容纳7个汉字 + 1个冒号
+  width: 120px;
+  max-width: 120px;
+  flex-shrink: 0;
+}
+.w-base {
+  width: 88px;
+}
+.w-spec {
+  width: 60px !important;
+}
+.flex-grid .w-fixed {
+  @extend  .w-100;
+}
+.padding-lr-30 {
+  padding-left: $gap;
+  padding-right: $gap;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.padding-tb-30 {
+  padding-top: $gap;
+  padding-bottom: $gap;
+}
+.padding-0 {
+  padding: 0;
+}
+.padding-20 {
+  padding: 20px;
+}
+.padding-24 {
+  padding: 24px;
+}
+.margin-lr-15 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.margin-20 {
+  margin: 20px;
+}
+.margin-b-24 {
+  margin-bottom: 24px;
+}
+.line-h--text {
+  //line-height: 16px;
+}
+
+.bg-white {
+  background-color: white;
+}
+.bg-f7 {
+  background-color: #{$f7};
+}
+
+.margin-b-30 {
+  margin-bottom: calc(#{$gap} - 10px);
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+a.text-link {
+  color: #{$link};
+}
+.text-link a {
+  @extend .text-link;
+}
+.main-content {
+  padding: 24px;
+  @extend .bg-white;
+  margin: $gap;
+  flex: 0 0 auto;
+  border: 1px solid #DCDCDC;
+  border-radius: 3px;
+}
+
+.table-fixed {
+  table-layout: fixed;
+  width: 100%;
+}
+.vertical-align > *{
+  vertical-align: middle;
+}
+// 冒号
+.colon::after {
+  content: ':';
+}
+//  强调
+.emphasis {
+  font-weight: bold;
+}
+
+// 颜色-强调
+.color-emphasis {
+  color: #{$theme-color} !important;
+}
+
+// 标签-强调、标签-信息
+.label-info {
+  padding: 3px 14px;
+  border-radius: 3px;
+  background-color: #{$f7} !important;
+  color: #{$btn-text} !important;
+}
+.label-emphasis {
+  @extend .label-info;
+  background-color: #{$bg-theme-color} !important;
+  color: #{$helper-color} !important;
+}
+
+// 必填
+.must-fill::after {
+  content: '*';
+  margin-left: 5px;
+  color: #{$tip-red};
+  vertical-align: initial;
+}
+
+// 蓝色边框、 主题色边框
+@mixin border-cfg {
+  border: 1px solid #{$link};
+  border-radius: 3px;
+  padding: 20px;
+}
+.border-theme {
+  @include border-cfg;
+  border-color: #{$theme-color};
+  $color: #fffcfb;
+  background-color: #{$color};
+}
+.border-blue {
+  @include border-cfg;
+  border-color: #{$link};
+  $color: #fafbff;
+  background-color: #{$color};
+}
+
+//
+.children-left-margin {
+  $gap: 10px;
+  margin-left: -#{$gap};
+  margin-top: -#{$gap};
+  .child {
+    margin-left: #{$gap};
+    margin-top: #{$gap};
+  }
+}
+
+// 栅格内部， 上下布局
+.form-cell-title {
+  margin-bottom: 5px;
+}
+// 栅格内部， 左右布局
+.form-cell-title.w-fixed,
+.form-cell-title.w-100{
+  margin-bottom: 0;
+}
+
+// 文本颜色
+.text-theme {
+  color: #{$theme-color};
+}
+
+//
+.textarea {
+  padding: 4px 12px;
+}

@@ -1,0 +1,26 @@
+@import '../../../css/common/funcs.scss';
+table.table-fixed {
+  thead tr {
+    .conract-name{
+      width: percent(180, 1440);
+    }
+    .contract-standard {
+      width: percent(135, 1440);
+    }
+    .our-contract-code {
+      width: percent(180, 1440);
+    }
+    .other-contract-code {
+      width: percent(180, 1440);
+    }
+    .contract-status {
+      width: percent(100, 1440);
+    }
+    .contract-attachment {
+      width: percent(138, 1440);
+    }
+    .contract-action {
+      width: percent(203, 1440);
+    }
+  }
+}

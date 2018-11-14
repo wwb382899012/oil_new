@@ -1,0 +1,23 @@
+table.table-fixed thead tr .conract-name {
+  width: 12.5%;
+}
+table.table-fixed thead tr .contract-standard {
+  width: 9.375%;
+}
+table.table-fixed thead tr .our-contract-code {
+  width: 12.5%;
+}
+table.table-fixed thead tr .other-contract-code {
+  width: 12.5%;
+}
+table.table-fixed thead tr .contract-status {
+  width: 6.9444444444%;
+}
+table.table-fixed thead tr .contract-attachment {
+  width: 9.5833333333%;
+}
+table.table-fixed thead tr .contract-action {
+  width: 14.0972222222%;
+}
+
+/*# sourceMappingURL=index.css.map */
